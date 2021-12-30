@@ -1,0 +1,7 @@
+.navbar {
+  margin: 3px;
+}
+
+.navbar.active {
+  text-decoration: underline;
+}
