@@ -15,14 +15,14 @@ const SideBar = ({ isOpen, toggle }) => {
   return (
     <>
       <Icon
-        boxSize={'2rem'}
+        boxSize={'4rem'}
         as={FaBars}
         pos="fixed"
         right={0}
         display={[, , 'none']}
         onClick={toggle}
         cursor="pointer"
-        p="1"
+        p="3"
       />
       <Stack
         display={[, isOpen ? '' : 'none', 'none']}
