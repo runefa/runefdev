@@ -23,18 +23,25 @@ const Education = () => {
   const courseworkColor = useColorModeValue('gray.300', 'gray.600');
   const carolinaBlue = '#4B9CD3';
   const csCourses = [
-    'one',
-    'two',
-    'three',
-    'four',
-    'five',
-    'six',
-    'seven',
-    'eight',
-    'nine',
-    'ten',
+    'Practical Web Design/Dev',
+    'Data Structures',
+    'Modern Web Programming',
+    'Internet Services and Protocols',
+    'Algorithms and Analysis',
+    'Languages and Computation',
+    'Files and Databases',
+    'Computer Organization',
   ];
-  const statsCourses = ['one', 'two', 'three', 'four', 'five', 'six', 'seven'];
+  const statsCourses = [
+    'Data Science',
+    'Data Analysis Methods',
+    'Linear Optimization',
+    'Desicion Analytics',
+    'Probability',
+    'Stochastic Modeling',
+    'Mathematical Statistics',
+    'Discrete Mathematics',
+  ];
   return (
     <Flex id="education" minH="100vh" px="8" width="100%">
       <Flex
