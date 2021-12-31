@@ -4,7 +4,6 @@ export const experience_data = {
     'Software Engineer Intern': {
       location: 'Remote',
       dates: 'June 2020 - Aug 2020',
-      title: 'Software Engineer Intern',
       description: [
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',

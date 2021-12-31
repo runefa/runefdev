@@ -104,19 +104,23 @@ const Experience = () => {
   const testFunction = () => {
     companies.map(company => {
       const titles = [];
+      const titlesData = [];
+      let titleData = [];
       console.log(company);
 
-      Object.keys(experience_data[company]).map(entry => {
-        //logoURL, then experiences
-        console.log(entry);
-        titles.push(entry);
+      titles.push(...Object.keys(experience_data[company]));
 
-        console.log(experience_data[company][entry]);
-      });
-      console.log(titles);
       titles.slice(1).map(title => {
-        Object.keys();
+        titleData.push(title);
+        Object.keys(experience_data[company][title]).map(entry => {
+          titleData.push(experience_data[company][title][entry]);
+        });
+
+        titlesData.push(titleData);
+        titleData = [];
       });
+      console.log(titlesData);
+
       return <Company company={company} />;
     });
   };
