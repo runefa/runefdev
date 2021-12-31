@@ -20,6 +20,7 @@ import About from './components/Sections/About';
 import Home from './components/Sections/Home';
 import { PillPity } from 'pill-pity';
 import Education from './components/Sections/Education';
+import Experience from './components/Sections/Experience';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,18 +61,16 @@ function App() {
               <Home />
 
               <About />
+
               <Education />
 
-              {/* <Flex id="education" height="100vh" px="8" align="center">
-                <Flex height="80%">
-                  <Text textStyle="h1">Education</Text>
-                </Flex>
-              </Flex> */}
-              <Flex id="experience" height="100vh" px="8" align="center">
+              <Experience />
+
+              {/* <Flex id="experience" height="100vh" px="8" align="center">
                 <Flex height="80%">
                   <Text textStyle="h1">Experience</Text>
                 </Flex>
-              </Flex>
+              </Flex> */}
             </PillPity>
           </Box>
         </Flex>

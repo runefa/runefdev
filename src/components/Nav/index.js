@@ -32,8 +32,11 @@ const NavBar = () => {
       /> */}
 
       {/* <Text fontSize="1.25rem">Haroon Feisal</Text> */}
-      {/* <Text fontSize="1.25rem">HF</Text> */}
-      <Text mb="20"></Text>
+      {/* Add Logo Here */}
+      <Text fontSize="1.25rem" mt="10" mb="10" fontWeight="black">
+        HF
+      </Text>
+      {/* <Text mt="20"></Text> */}
       <Link
         to="home"
         smooth={true}

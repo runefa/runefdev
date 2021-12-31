@@ -55,7 +55,12 @@ const Education = () => {
 
             <Text textStyle="body" mt="1" opacity={0.8}>
               B.S. in Computer Science, Statistics and Analytics{' '}
-              <Text opacity={0.6} display="inline-block" fontSize="sm">
+              <Text
+                as="span"
+                opacity={0.6}
+                display="inline-block"
+                fontSize="sm"
+              >
                 (Highest Distinction)
               </Text>
             </Text>
@@ -64,30 +69,31 @@ const Education = () => {
               Relevant Coursework:
             </Text>
 
-            <Box bg={courseworkColor} p={4} borderRadius="sm" mt="2">
+            <Box bg={courseworkColor} p={4} borderRadius="sm" mt={2}>
               <Text textStyle="body">Computer Science: </Text>
-              <Grid templateColumns="repeat(2, 1fr)" px="2" gap="2">
+              <Grid
+                templateColumns={['1fr', , 'repeat(2, 1fr)']}
+                px={['0', , '2']}
+                gap={['0', , '2']}
+              >
                 <UnorderedList styleType="square">
                   {csCourses
-                    .slice(
-                      0,
-                      Math.round(csCourses.length - csCourses.length / 2)
-                    )
-                    .map(item => {
+                    .slice(0, Math.round(csCourses.length / 2))
+                    .map((item, index) => {
                       return (
-                        <ListItem>
-                          <Text fontSize="md">{item}</Text>
+                        <ListItem key={`parent${index}`}>
+                          <Text textStyle="education">{item}</Text>
                         </ListItem>
                       );
                     })}
                 </UnorderedList>
                 <UnorderedList styleType="square">
                   {csCourses
-                    .slice(Math.round(csCourses.length - csCourses.length / 2))
-                    .map(item => {
+                    .slice(Math.round(csCourses.length / 2))
+                    .map((item, index) => {
                       return (
-                        <ListItem>
-                          <Text fontSize="md">{item}</Text>
+                        <ListItem key={`parent${index}`}>
+                          <Text textStyle="education">{item}</Text>
                         </ListItem>
                       );
                     })}
@@ -97,16 +103,20 @@ const Education = () => {
 
             <Box bg={courseworkColor} p={4} borderRadius="sm" mt="4">
               <Text textStyle="body">Statistics and Analytics: </Text>
-              <Grid templateColumns="repeat(2, 1fr)" px="2" gap="2">
+              <Grid
+                templateColumns={['1fr', , 'repeat(2, 1fr)']}
+                px={['0', , '2']}
+                gap={['0', , '2']}
+              >
                 <UnorderedList styleType="square">
                   {statsCourses
                     .slice(
                       0,
                       Math.round(statsCourses.length - statsCourses.length / 2)
                     )
-                    .map(item => {
+                    .map((item, index) => {
                       return (
-                        <ListItem>
+                        <ListItem key={`parent${index}`}>
                           <Text fontSize="md">{item}</Text>
                         </ListItem>
                       );
@@ -118,9 +128,9 @@ const Education = () => {
                     .slice(
                       Math.round(statsCourses.length - statsCourses.length / 2)
                     )
-                    .map(item => {
+                    .map((item, index) => {
                       return (
-                        <ListItem>
+                        <ListItem key={`parent${index}`}>
                           <Text fontSize="md">{item}</Text>
                         </ListItem>
                       );

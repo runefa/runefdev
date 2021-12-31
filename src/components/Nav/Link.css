@@ -1,5 +1,6 @@
 .navbar {
   margin: 3px;
+  cursor: pointer;
 }
 
 .navbar.active {

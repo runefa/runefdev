@@ -16,7 +16,7 @@ const theme = extendTheme({
       letterSpacing: 'tight',
     },
     h1: {
-      fontSize: ['3rem', '3rem', '3rem'],
+      fontSize: ['2rem', '3rem', '3rem'],
       fontWeight: 'bold',
       lineHeight: '110%',
       letterSpacing: 'tight',
@@ -28,7 +28,7 @@ const theme = extendTheme({
       letterSpacing: '-1%',
     },
     h3: {
-      fontSize: ['1rem', '1.4rem'],
+      fontSize: ['1.2rem', '1.4rem'],
       fontWeight: 'semibold',
       letterSpacing: '-1%',
     },
@@ -52,9 +52,12 @@ const theme = extendTheme({
       fontSize: ['0.75rem', '0.875rem'],
     },
     list: {
-      fontSize: ['1rem', '1.25rem'],
+      fontSize: ['.9rem', '1rem'],
     },
     button: {
+      fontSize: ['1rem', '1rem'],
+    },
+    education: {
       fontSize: ['1rem', '1rem'],
     },
   },

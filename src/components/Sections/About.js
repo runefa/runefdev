@@ -10,7 +10,7 @@ import {
   Divider,
   Icon,
 } from '@chakra-ui/react';
-import { GoTriangleLeft } from 'react-icons/go';
+import { GoTriangleLeft, GoTriangleUp } from 'react-icons/go';
 
 const About = () => {
   const bgColor = useColorModeValue('gray.200', 'gray.700');
@@ -31,18 +31,34 @@ const About = () => {
             <Text textStyle="h1">About</Text>
             <Divider borderColor={borderColor} mb="10" />
 
-            <Flex justify="center" align="center" mb="10">
+            <Flex
+              justify="center"
+              align="center"
+              mb="10"
+              direction={['column', 'column', 'row']}
+            >
               <Image
                 border="1px"
-                boxSize={['100px', '125px', '200px']}
+                boxSize={['150px', '175px', '200px']}
                 src="https://miro.medium.com/max/3150/2*v6-FrHQO9uP7mCFvQ-we5Q.jpeg"
                 objectFit="cover"
                 objectPosition="50% 50%"
                 borderRadius="full"
                 mr={['2', '6', '10']}
               />
-              <Stack direction="row" align="center">
-                <Icon color={bubbleColor} as={GoTriangleLeft} mr="-4" />
+              <Stack direction={['column', 'column', 'row']} align="center">
+                <Icon
+                  color={bubbleColor}
+                  as={GoTriangleLeft}
+                  mr="-4"
+                  display={['none', 'none', 'flex']}
+                />
+                <Icon
+                  color={bubbleColor}
+                  as={GoTriangleUp}
+                  mb="-1rem !important"
+                  display={['flex', 'flex', 'none']}
+                />
                 <Box bg={bubbleColor} p={4} borderRadius="sm">
                   <Text textStyle="h3">Hi, I'm Haroon.</Text>
                   <Text textStyle="body" mt="4">
