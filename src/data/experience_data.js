@@ -8,6 +8,7 @@ export const experience_data = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       ],
+      badges: [['lol', 'hi']],
     },
   },
   'Microsoft Azure': {
@@ -19,6 +20,7 @@ export const experience_data = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       ],
+      badges: [['lol', 'hi']],
     },
     'Software Engineer I': {
       location: 'Redmond, WA',
@@ -27,6 +29,7 @@ export const experience_data = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       ],
+      badges: [['lol', 'hi']],
     },
   },
 };

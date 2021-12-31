@@ -31,19 +31,21 @@ const Company = props => {
       direction="column"
     >
       <Flex width="max-content" borderBottom="1px">
-        {/* How to access logo URL  */}
-        {/* <Text>{props.titles[0][4]}</Text> */}
         <Text textStyle="h2">{props.company}</Text>
       </Flex>
       {props.titles.map((title, index) => {
         if (index === 0) {
-          return <Title title={title} />;
+          return (
+            <React.Fragment key={`fragment${index}`}>
+              <Title title={title} />
+            </React.Fragment>
+          );
         }
         return (
-          <>
+          <React.Fragment key={`fragment${index}`}>
             <Divider />
             <Title title={title} />
-          </>
+          </React.Fragment>
         );
       })}
     </Flex>
@@ -59,14 +61,14 @@ const Title = props => {
         </Text>
         <Text textStyle="h3">{props.title[0]}</Text>
         <Flex direction="row" mt={-1.5} wrap="wrap" pl={[2, 0, 0]}>
-          {/* {props.badges.map(badge => {
+          {/* {props.title[4].map(badge => {
             return <EBadge badge={props.badge} />;
           })} */}
         </Flex>
 
         <UnorderedList mt={1} px={2} styleType="square">
-          {props.title[3].map(text => {
-            return <EListItem text={text} />;
+          {props.title[3].map((text, index) => {
+            return <EListItem text={text} key={index} />;
           })}
         </UnorderedList>
       </Box>
@@ -149,8 +151,10 @@ const Experience = () => {
             <Text textStyle="h1">Experience</Text>
             <Divider borderColor={borderColor} />
             <Flex width="100%" direction="column">
-              {Object.keys(parsedData).map(key => {
-                return <Company company={key} titles={parsedData[key]} />;
+              {Object.keys(parsedData).map((key, index) => {
+                return (
+                  <Company company={key} key={index} titles={parsedData[key]} />
+                );
               })}
             </Flex>
           </Flex>
