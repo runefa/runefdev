@@ -15,13 +15,13 @@ const SideBar = ({ isOpen, toggle }) => {
   return (
     <>
       <Icon
-        boxSize={'2.5rem'}
+        boxSize={'2rem'}
         as={FaBars}
         pos="fixed"
         right={0}
         display={[, , 'none']}
         onClick={toggle}
-        p="2"
+        p="1"
       />
       <Stack
         display={[, isOpen ? '' : 'none', 'none']}
@@ -36,13 +36,14 @@ const SideBar = ({ isOpen, toggle }) => {
         transition="all 0.5s ease-in-out"
         top={isOpen ? '0' : '-100%'}
         opacity={isOpen ? '100%' : '0'}
+        zIndex={999}
       >
         <Icon
           as={FaTimes}
           pos="fixed"
           right="0"
-          boxSize="2.5rem"
-          p="2"
+          boxSize="2rem"
+          p="1"
           onClick={toggle}
         />
 

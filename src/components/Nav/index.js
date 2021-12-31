@@ -22,17 +22,18 @@ const NavBar = () => {
       textAlign="left"
       display={['none', , 'flex']}
     >
-      <Image
+      {/* <Image
         border="1px"
         boxSize="150px"
         src="https://miro.medium.com/max/3150/2*v6-FrHQO9uP7mCFvQ-we5Q.jpeg"
         objectFit="cover"
         objectPosition="50% 50%"
         borderRadius="sm"
-      />
+      /> */}
 
       {/* <Text fontSize="1.25rem">Haroon Feisal</Text> */}
       {/* <Text fontSize="1.25rem">HF</Text> */}
+      <Text mb="20"></Text>
       <Link
         to="home"
         smooth={true}

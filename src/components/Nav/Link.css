@@ -4,4 +4,6 @@
 
 .navbar.active {
   text-decoration: underline;
+  /* text-decoration-color: #9f7aea;
+  color: #9f7aea; */
 }

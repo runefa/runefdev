@@ -1,4 +1,4 @@
-import { extendTheme, Flex } from '@chakra-ui/react';
+import { extendTheme } from '@chakra-ui/react';
 
 const theme = extendTheme({
   config: {
@@ -9,6 +9,12 @@ const theme = extendTheme({
     body: 'Roboto Mono',
   },
   textStyles: {
+    h0: {
+      fontSize: ['3rem', '3rem', '4rem'],
+      fontWeight: 'bold',
+      lineHeight: '110%',
+      letterSpacing: 'tight',
+    },
     h1: {
       fontSize: ['3rem', '3rem', '3rem'],
       fontWeight: 'bold',
@@ -32,7 +38,7 @@ const theme = extendTheme({
       letterSpacing: '-1%',
     },
     body: {
-      fontSize: ['0.875rem', '1rem'],
+      fontSize: ['1rem', '1.1rem'],
     },
     divider: {
       fontSize: ['1.75rem', '2.25rem', '2.5rem'],
@@ -48,19 +54,20 @@ const theme = extendTheme({
     list: {
       fontSize: ['1rem', '1.25rem'],
     },
+    button: {
+      fontSize: ['1rem', '1rem'],
+    },
   },
   components: {
     Link: {
       variants: {
         button: {
           borderBottom: '2px',
-          borderColor: 'purple.400',
           borderRadius: 'md',
           backgroundColor: 'rgba(74, 85, 104, 0.8)',
           padding: '2',
           _hover: {
-            background: 'white',
-            color: 'purple.500',
+            background: 'gray.500',
             textDecoration: 'none',
           },
           align: 'center',

@@ -10,11 +10,13 @@
     "@testing-library/react": "^10.4.9",
     "@testing-library/user-event": "^12.8.3",
     "framer-motion": "^4.1.17",
+    "pill-pity": "^0.2.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^3.11.0",
     "react-scripts": "5.0.0",
     "react-scroll": "^1.8.4",
+    "tinycolor2": "^1.4.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
