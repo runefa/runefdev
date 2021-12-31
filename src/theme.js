@@ -2,7 +2,7 @@ import { extendTheme } from '@chakra-ui/react';
 
 const theme = extendTheme({
   config: {
-    initialColorMode: 'system',
+    initialColorMode: 'dark',
   },
   fonts: {
     heading: 'Roboto Mono',

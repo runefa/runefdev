@@ -31,10 +31,10 @@ const About = () => {
             <Text textStyle="h1">About</Text>
             <Divider borderColor={borderColor} mb="10" />
 
-            <Flex justify="center" align="center" mb="4">
+            <Flex justify="center" align="center" mb="10">
               <Image
                 border="1px"
-                boxSize={['100px', '150px', '200px']}
+                boxSize={['100px', '125px', '200px']}
                 src="https://miro.medium.com/max/3150/2*v6-FrHQO9uP7mCFvQ-we5Q.jpeg"
                 objectFit="cover"
                 objectPosition="50% 50%"
@@ -45,32 +45,37 @@ const About = () => {
                 <Icon color={bubbleColor} as={GoTriangleLeft} mr="-4" />
                 <Box bg={bubbleColor} p={4} borderRadius="sm">
                   <Text textStyle="h3">Hi, I'm Haroon.</Text>
+                  <Text textStyle="body" mt="4">
+                    My path to coding began with Legos. I created a vehicle and
+                    needed to program the logic. Later, when I learned I could
+                    program videogames, I was sold.
+                  </Text>
                 </Box>
               </Stack>
             </Flex>
 
-            <Text textStyle="body" mb="4">
-              I’m a Senior at the University of North Carolina at Chapel Hill
-              majoring in computer science and statistics, interested in a
-              career related to software and tech.
-            </Text>
+            {/* <Text textStyle="body" mb="4">
+              My path to coding began with Legos. I created a vehicle and needed
+              to program the logic. Later, when I learned I could program
+              videogames, I was sold.
+            </Text> */}
 
-            <Text textStyle="body" mb="4">
+            {/* <Text textStyle="body" mb="4">
               I completed my 2021 Summer internship as a Software Engineer at
               Microsoft Azure with the AppServices Certificates and Domains
               Team. I gained valuable experience working on large pre-existing
               systems, and learned how to work in an agile team environment.
-            </Text>
+            </Text> */}
 
-            <Text textStyle="body" mb="4">
+            {/* <Text textStyle="body" mb="4">
               I am interested in both frontend and backend development, and try
               to expand my skillset as much as possible by traveling to
               hackathons.
-            </Text>
+            </Text> */}
 
             <Text textStyle="body" mb="4">
-              Apart from coding, I enjoy weightlifting, biking, gaming, playing
-              piano, and reading.
+              Outside of coding, I enjoy weightlifting, biking, gaming, and
+              reading.
             </Text>
           </Flex>
         </Box>

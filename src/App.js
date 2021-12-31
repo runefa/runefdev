@@ -19,6 +19,7 @@ import SideBar from './components/Side';
 import About from './components/Sections/About';
 import Home from './components/Sections/Home';
 import { PillPity } from 'pill-pity';
+import Education from './components/Sections/Education';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +42,9 @@ function App() {
   return (
     <ChakraProvider theme={theme_}>
       <Flex as="section" id="hero" maxW="6xl" mx="auto" direction="column">
-        <Flex direction={['column', , 'row']}>
+        <Flex
+        // direction={['column', , 'row']}
+        >
           <SideBar isOpen={isOpen} toggle={toggle} />
           <NavBar />
           <Box textAlign="center" fontSize="xl" w={['100%', , '80%']}>
@@ -53,17 +56,17 @@ function App() {
               minH="100vh"
               patOpacity={0.2}
               pb={36}
-              // ml="10px"
             >
               <Home />
 
               <About />
+              <Education />
 
-              <Flex id="education" height="100vh" px="8" align="center">
+              {/* <Flex id="education" height="100vh" px="8" align="center">
                 <Flex height="80%">
                   <Text textStyle="h1">Education</Text>
                 </Flex>
-              </Flex>
+              </Flex> */}
               <Flex id="experience" height="100vh" px="8" align="center">
                 <Flex height="80%">
                   <Text textStyle="h1">Experience</Text>
