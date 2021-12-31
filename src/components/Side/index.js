@@ -21,6 +21,7 @@ const SideBar = ({ isOpen, toggle }) => {
         right={0}
         display={[, , 'none']}
         onClick={toggle}
+        cursor="pointer"
         p="1"
       />
       <Stack
@@ -37,6 +38,7 @@ const SideBar = ({ isOpen, toggle }) => {
         top={isOpen ? '0' : '-100%'}
         opacity={isOpen ? '100%' : '0'}
         zIndex={999}
+        cursor="pointer"
       >
         <Icon
           as={FaTimes}
