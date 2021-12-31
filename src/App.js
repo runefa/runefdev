@@ -43,9 +43,7 @@ function App() {
   return (
     <ChakraProvider theme={theme_}>
       <Flex as="section" id="hero" maxW="6xl" mx="auto" direction="column">
-        <Flex
-        // direction={['column', , 'row']}
-        >
+        <Flex>
           <SideBar isOpen={isOpen} toggle={toggle} />
           <NavBar />
           <Box textAlign="center" fontSize="xl" w={['100%', , '80%']}>
@@ -59,18 +57,9 @@ function App() {
               pb={36}
             >
               <Home />
-
               <About />
-
               <Education />
-
               <Experience />
-
-              {/* <Flex id="experience" height="100vh" px="8" align="center">
-                <Flex height="80%">
-                  <Text textStyle="h1">Experience</Text>
-                </Flex>
-              </Flex> */}
             </PillPity>
           </Box>
         </Flex>

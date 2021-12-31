@@ -1,8 +1,16 @@
 import { extendTheme } from '@chakra-ui/react';
+import { mode } from '@chakra-ui/theme-tools';
 
 const theme = extendTheme({
   config: {
     initialColorMode: 'dark',
+  },
+  styles: {
+    global: props => ({
+      'html, body': {
+        backgroundColor: mode('gray.100', 'base.03')(props),
+      },
+    }),
   },
   fonts: {
     heading: 'Roboto Mono',

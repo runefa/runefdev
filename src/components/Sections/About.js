@@ -17,6 +17,7 @@ const About = () => {
   const hover = useColorModeValue('gray.400', 'gray.500');
   const borderColor = useColorModeValue('black', 'white');
   const bubbleColor = useColorModeValue('gray.300', 'gray.600');
+
   return (
     <Flex id="about" minH="100vh" px="8" width="100%">
       <Flex

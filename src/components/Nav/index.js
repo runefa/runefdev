@@ -1,11 +1,14 @@
 import React from 'react';
-import { Link } from 'react-scroll';
+import { Link, animateScroll as scroll } from 'react-scroll';
 import './Link.css';
 import { Flex, Stack, Image, Text, useColorModeValue } from '@chakra-ui/react';
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 
 const NavBar = () => {
   const bgColor = useColorModeValue('gray.200', 'gray.700');
+  const scrollToTop = () => {
+    scroll.scrollToTop({ duration: 500 });
+  };
   return (
     <Stack
       pos="sticky"
@@ -33,7 +36,14 @@ const NavBar = () => {
 
       {/* <Text fontSize="1.25rem">Haroon Feisal</Text> */}
       {/* Add Logo Here */}
-      <Text fontSize="1.25rem" mt="10" mb="10" fontWeight="black">
+      <Text
+        fontSize="1.25rem"
+        mt="10"
+        mb="10"
+        fontWeight="black"
+        onClick={scrollToTop}
+        cursor="pointer"
+      >
         HF
       </Text>
       {/* <Text mt="20"></Text> */}

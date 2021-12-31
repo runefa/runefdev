@@ -30,8 +30,23 @@ const Company = props => {
       width="100%"
       direction="column"
     >
-      <Flex width="max-content" borderBottom="1px">
-        <Text textStyle="h2">{props.company}</Text>
+      <Flex
+        width="max-content"
+        borderBottom="1px"
+        align="center"
+        justify="center"
+        p={1}
+      >
+        <Image
+          src={props.logoURL}
+          fallbackSrc="https://via.placeholder.com/40"
+          boxSize="40px"
+          p="5px"
+          mr={1}
+        />
+        <Text textStyle="h2" mr={1}>
+          {props.company}
+        </Text>
       </Flex>
       {props.titles.map((title, index) => {
         if (index === 0) {
@@ -55,15 +70,15 @@ const Company = props => {
 const Title = props => {
   return (
     <>
-      <Box ml={0} mt={1} p={2}>
+      <Box ml={0} mt={1} p={2} minH="20">
         <Text textStyle="h4" opacity=".6">
           {props.title[1]} · {props.title[2]}
         </Text>
         <Text textStyle="h3">{props.title[0]}</Text>
         <Flex direction="row" mt={-1.5} wrap="wrap" pl={[2, 0, 0]}>
-          {/* {props.title[4].map(badge => {
-            return <EBadge badge={props.badge} />;
-          })} */}
+          {props.title[4].map((badge, index) => {
+            return <EBadge badge={badge} key={index} />;
+          })}
         </Flex>
 
         <UnorderedList mt={1} px={2} styleType="square">
@@ -118,11 +133,12 @@ const Experience = () => {
         Object.keys(experience_data[company][title]).map(entry => {
           titleData.push(experience_data[company][title][entry]);
         });
-        titleData.push(experience_data[company].logoURL);
+
         titlesData.unshift(titleData);
 
         titleData = [];
       });
+      titlesData.unshift(experience_data[company].logoURL);
     });
     return output;
   };
@@ -153,7 +169,12 @@ const Experience = () => {
             <Flex width="100%" direction="column">
               {Object.keys(parsedData).map((key, index) => {
                 return (
-                  <Company company={key} key={index} titles={parsedData[key]} />
+                  <Company
+                    company={key}
+                    key={index}
+                    titles={parsedData[key].slice(1)}
+                    logoURL={parsedData[key][0]}
+                  />
                 );
               })}
             </Flex>
