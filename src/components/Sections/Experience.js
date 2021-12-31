@@ -30,21 +30,22 @@ const Company = props => {
       width="100%"
       direction="column"
     >
-      <Flex width="min-content" borderBottom="1px">
+      <Flex width="max-content" borderBottom="1px">
+        {/* How to access logo URL  */}
+        {/* <Text>{props.titles[0][4]}</Text> */}
         <Text textStyle="h2">{props.company}</Text>
       </Flex>
       {props.titles.map((title, index) => {
         if (index === 0) {
-          return <Title {...title} />;
+          return <Title title={title} />;
         }
         return (
           <>
             <Divider />
-            <Title {...title} />;
+            <Title title={title} />
           </>
         );
       })}
-      <Divider />
     </Flex>
   );
 };
@@ -54,17 +55,17 @@ const Title = props => {
     <>
       <Box ml={0} mt={1} p={2}>
         <Text textStyle="h4" opacity=".6">
-          {props.location} · {props.dates}
+          {props.title[1]} · {props.title[2]}
         </Text>
-        <Text textStyle="h3">{props.title}</Text>
+        <Text textStyle="h3">{props.title[0]}</Text>
         <Flex direction="row" mt={-1.5} wrap="wrap" pl={[2, 0, 0]}>
-          {props.badges.map(badge => {
+          {/* {props.badges.map(badge => {
             return <EBadge badge={props.badge} />;
-          })}
+          })} */}
         </Flex>
 
         <UnorderedList mt={1} px={2} styleType="square">
-          {props.description.map(text => {
+          {props.title[3].map(text => {
             return <EListItem text={text} />;
           })}
         </UnorderedList>
@@ -98,15 +99,15 @@ const EListItem = props => {
 };
 
 const Experience = () => {
-  //console.log(Object.keys(experience_data));
-  const companies = Object.keys(experience_data);
-  //console.log(Object.keys(experience_data[companies[1]]));
-  const testFunction = () => {
+  const dataParser = () => {
+    const output = {};
+    const companies = [...Object.keys(experience_data)];
+    companies.reverse();
     companies.map(company => {
       const titles = [];
       const titlesData = [];
       let titleData = [];
-      console.log(company);
+      output[company] = titlesData;
 
       titles.push(...Object.keys(experience_data[company]));
 
@@ -115,16 +116,16 @@ const Experience = () => {
         Object.keys(experience_data[company][title]).map(entry => {
           titleData.push(experience_data[company][title][entry]);
         });
+        titleData.push(experience_data[company].logoURL);
+        titlesData.unshift(titleData);
 
-        titlesData.push(titleData);
         titleData = [];
       });
-      console.log(titlesData);
-
-      return <Company company={company} />;
     });
+    return output;
   };
-  testFunction();
+  const parsedData = dataParser();
+  // console.log(parsedData);
 
   const bgColor = useColorModeValue('gray.200', 'gray.700');
   const hover = useColorModeValue('gray.400', 'gray.500');
@@ -148,256 +149,9 @@ const Experience = () => {
             <Text textStyle="h1">Experience</Text>
             <Divider borderColor={borderColor} />
             <Flex width="100%" direction="column">
-              <Flex
-                mt="6"
-                p={[2, , 4]}
-                bg={courseworkColor}
-                width="100%"
-                direction="column"
-              >
-                <Flex width="min-content" borderBottom="1px">
-                  <Text textStyle="h2">Microsoft</Text>
-                </Flex>
-
-                <Box ml={0} mt={1} p={2}>
-                  <Text textStyle="h4" opacity=".6">
-                    Remote · May 2021 - Aug 2021
-                  </Text>
-                  <Text textStyle="h3">Software Engineer I</Text>
-                  <Flex direction="row" mt={-1.5} wrap="wrap" pl={[2, 0, 0]}>
-                    <Badge
-                      mt="2"
-                      bg={badgeColor}
-                      as={Link}
-                      mr="2"
-                      href="https://google.com"
-                      isExternal
-                    >
-                      Javascript
-                    </Badge>
-                    <Badge
-                      mt="2"
-                      bg={badgeColor}
-                      as={Link}
-                      mr="2"
-                      href="https://google.com"
-                      isExternal
-                    >
-                      Javascript
-                    </Badge>
-                    <Badge
-                      mt="2"
-                      bg={badgeColor}
-                      as={Link}
-                      mr="2"
-                      href="https://google.com"
-                      isExternal
-                    >
-                      Javascript
-                    </Badge>
-                    <Badge
-                      mt="2"
-                      bg={badgeColor}
-                      as={Link}
-                      mr="2"
-                      href="https://google.com"
-                      isExternal
-                    >
-                      Javascript
-                    </Badge>
-                    <Badge
-                      mt="2"
-                      bg={badgeColor}
-                      as={Link}
-                      mr="2"
-                      href="https://google.com"
-                      isExternal
-                    >
-                      Javascript
-                    </Badge>
-                  </Flex>
-
-                  <UnorderedList mt={1} px={2} styleType="square">
-                    <ListItem>
-                      <Text textStyle="list">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
-                      </Text>
-                    </ListItem>
-                    <ListItem>
-                      <Text textStyle="list">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
-                      </Text>
-                    </ListItem>
-                  </UnorderedList>
-                </Box>
-                <Divider />
-                <Box ml={0} mt={1} p={2}>
-                  <Text textStyle="h4" opacity=".6">
-                    Remote · May 2021 - Aug 2021
-                  </Text>
-                  <Text textStyle="h3">Software Engineer I</Text>
-                  <Flex direction="row" mt={-1.5} wrap="wrap" pl={[2, 0, 0]}>
-                    <Badge
-                      mt="2"
-                      bg={badgeColor}
-                      as={Link}
-                      mr="2"
-                      href="https://google.com"
-                      isExternal
-                    >
-                      Javascript
-                    </Badge>
-                    <Badge
-                      mt="2"
-                      bg={badgeColor}
-                      as={Link}
-                      mr="2"
-                      href="https://google.com"
-                      isExternal
-                    >
-                      Javascript
-                    </Badge>
-                    <Badge
-                      mt="2"
-                      bg={badgeColor}
-                      as={Link}
-                      mr="2"
-                      href="https://google.com"
-                      isExternal
-                    >
-                      Javascript
-                    </Badge>
-                    <Badge
-                      mt="2"
-                      bg={badgeColor}
-                      as={Link}
-                      mr="2"
-                      href="https://google.com"
-                      isExternal
-                    >
-                      Javascript
-                    </Badge>
-                    <Badge
-                      mt="2"
-                      bg={badgeColor}
-                      as={Link}
-                      mr="2"
-                      href="https://google.com"
-                      isExternal
-                    >
-                      Javascript
-                    </Badge>
-                  </Flex>
-
-                  <UnorderedList mt={1} px={2} styleType="square">
-                    <ListItem>
-                      <Text textStyle="list">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
-                      </Text>
-                    </ListItem>
-                    <ListItem>
-                      <Text textStyle="list">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
-                      </Text>
-                    </ListItem>
-                  </UnorderedList>
-                </Box>
-              </Flex>
-              <Flex
-                mt={6}
-                p={[2, , 4]}
-                bg={courseworkColor}
-                width="100%"
-                direction="column"
-              >
-                <Flex width="min-content" borderBottom="1px">
-                  <Text textStyle="h2">Fidelity</Text>
-                </Flex>
-
-                <Box ml={0} mt={1} p={2}>
-                  <Text textStyle="h4" opacity=".6">
-                    Remote · May 2021 - Aug 2021
-                  </Text>
-                  <Text textStyle="h3">Software Engineer I</Text>
-                  <Flex direction="row" mt={-1.5} wrap="wrap">
-                    <Badge
-                      mt="2"
-                      bg={badgeColor}
-                      as={Link}
-                      mr="2"
-                      href="https://google.com"
-                      isExternal
-                    >
-                      Javascript
-                    </Badge>
-                    <Badge
-                      mt="2"
-                      bg={badgeColor}
-                      as={Link}
-                      mr="2"
-                      href="https://google.com"
-                      isExternal
-                    >
-                      Javascript
-                    </Badge>
-                    <Badge
-                      mt="2"
-                      bg={badgeColor}
-                      as={Link}
-                      mr="2"
-                      href="https://google.com"
-                      isExternal
-                    >
-                      Javascript
-                    </Badge>
-                    <Badge
-                      mt="2"
-                      bg={badgeColor}
-                      as={Link}
-                      mr="2"
-                      href="https://google.com"
-                      isExternal
-                    >
-                      Javascript
-                    </Badge>
-                    <Badge
-                      mt="2"
-                      bg={badgeColor}
-                      as={Link}
-                      mr="2"
-                      href="https://google.com"
-                      isExternal
-                    >
-                      Javascript
-                    </Badge>
-                  </Flex>
-
-                  <UnorderedList mt={1} px={2} styleType="square">
-                    <ListItem>
-                      <Text textStyle="list">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
-                      </Text>
-                    </ListItem>
-                    <ListItem>
-                      <Text textStyle="list">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
-                      </Text>
-                    </ListItem>
-                  </UnorderedList>
-                </Box>
-              </Flex>
+              {Object.keys(parsedData).map(key => {
+                return <Company company={key} titles={parsedData[key]} />;
+              })}
             </Flex>
           </Flex>
         </Box>

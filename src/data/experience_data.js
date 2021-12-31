@@ -1,6 +1,6 @@
 export const experience_data = {
   Fidelity: {
-    logoURL: '',
+    logoURL: 'hi',
     'Software Engineer Intern': {
       location: 'Remote',
       dates: 'June 2020 - Aug 2020',
@@ -11,7 +11,7 @@ export const experience_data = {
     },
   },
   'Microsoft Azure': {
-    logoURL: '',
+    logoURL: 'hi',
     'Software Engineer Intern': {
       location: 'Remote',
       dates: 'May 2021 - Aug 2021',
