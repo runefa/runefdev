@@ -62,16 +62,16 @@ const Education = () => {
 
             <Text textStyle="body" mt="1" opacity={0.8}>
               Computer Science B.S. &amp; Statistics and Analytics B.S.
-              <Text
-                as="span"
-                opacity={0.6}
-                display="inline-block"
-                fontSize="sm"
-              >
-                (Highest Distinction)
-              </Text>
             </Text>
-
+            <Text
+              // as="span"
+              mt={1}
+              opacity={0.6}
+              display="inline-block"
+              fontSize="sm"
+            >
+              3.8/4.0 (Highest Distinction)
+            </Text>
             <Text textStyle="body" mt="4">
               Relevant Coursework:
             </Text>
