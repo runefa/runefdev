@@ -28,7 +28,14 @@ const Home = () => {
   const bgColor = useColorModeValue('gray.200', 'gray.700');
   const hover = useColorModeValue('gray.400', 'gray.500');
   return (
-    <Flex id="home" minH="100vh" px="8" width="100%">
+    <Flex
+      id="home"
+      minH={['auto', , '100vh']}
+      px="8"
+      width="100%"
+      pt={[8, 14, 0]}
+      // mt={[10, 16, 0]}
+    >
       <Flex
         pt="8"
         direction="column"

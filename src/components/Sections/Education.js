@@ -43,7 +43,13 @@ const Education = () => {
     'Discrete Mathematics',
   ];
   return (
-    <Flex id="education" minH="100vh" px="8" width="100%">
+    <Flex
+      id="education"
+      minH={['auto', , '100vh']}
+      px="8"
+      width="100%"
+      mt={[10, 16, 0]}
+    >
       <Flex
         pt="8"
         direction="column"

@@ -149,7 +149,13 @@ const Experience = () => {
   //gray.400 = #A0AEC0
 
   return (
-    <Flex id="experience" minH="100vh" px="8" width="100%">
+    <Flex
+      id="experience"
+      minH={['auto', , '100vh']}
+      px="8"
+      width="100%"
+      mt={[10, 16, 0]}
+    >
       <Flex
         pt="8"
         direction="column"
