@@ -19,7 +19,17 @@ const SideBar = ({ isOpen, toggle }) => {
         p="3"
       />
       <Stack
-        display={[isOpen ? 'inline' : '', isOpen ? 'inline' : '', 'none']}
+        display={[
+          isOpen ? 'inline' : 'none',
+          isOpen ? 'inline' : 'none',
+          'none',
+        ]}
+        // This allows transitions to work, weird scrolling on mobile though
+        // display={[
+        //   isOpen ? 'inline' : '',
+        //   isOpen ? 'inline' : '',
+        //   'none',
+        // ]}
         h="100vh"
         w="100vw"
         bg={bgColor}
@@ -28,9 +38,9 @@ const SideBar = ({ isOpen, toggle }) => {
         justify="center"
         direction="row"
         textAlign="center"
-        transition="all 0.3s ease-in-out"
-        top={isOpen ? '0' : '-100vh'}
-        opacity={isOpen ? '100%' : '0'}
+        // transition="all 0.3s ease-in-out"
+        // top={isOpen ? '0' : '-100vh'}
+        // opacity={isOpen ? '100%' : '0'}
         zIndex={999}
         cursor="pointer"
       >

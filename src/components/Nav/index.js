@@ -25,17 +25,6 @@ const NavBar = () => {
       textAlign="left"
       display={['none', null, 'flex']}
     >
-      {/* <Image
-        border="1px"
-        boxSize="150px"
-        src="https://miro.medium.com/max/3150/2*v6-FrHQO9uP7mCFvQ-we5Q.jpeg"
-        objectFit="cover"
-        objectPosition="50% 50%"
-        borderRadius="sm"
-      /> */}
-
-      {/* <Text fontSize="1.25rem">Haroon Feisal</Text> */}
-      {/* Add Logo Here */}
       <Text
         fontSize="1.25rem"
         mt="10"
@@ -46,7 +35,6 @@ const NavBar = () => {
       >
         HF
       </Text>
-      {/* <Text mt="20"></Text> */}
       <Link
         to="home"
         smooth={true}
