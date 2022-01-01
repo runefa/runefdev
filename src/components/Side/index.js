@@ -1,10 +1,4 @@
-import {
-  Stack,
-  Text,
-  Icon,
-  useColorModeValue,
-  Divider,
-} from '@chakra-ui/react';
+import { Stack, Text, Icon, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
 import { Link } from 'react-scroll';
 import { FaBars, FaTimes } from 'react-icons/fa';
@@ -19,7 +13,7 @@ const SideBar = ({ isOpen, toggle }) => {
         as={FaBars}
         pos="fixed"
         right={0}
-        display={[, , 'none']}
+        display={['', '', 'none']}
         onClick={toggle}
         cursor="pointer"
         p="3"

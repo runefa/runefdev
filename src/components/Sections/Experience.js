@@ -20,7 +20,7 @@ const Company = props => {
   return (
     <Flex
       mt="6"
-      p={[2, , 4]}
+      p={[2, null, 4]}
       bg={courseworkColor}
       width="100%"
       direction="column"
@@ -70,7 +70,7 @@ const Title = props => {
           {props.title[1]} · {props.title[2]}
         </Text>
         <Text textStyle="h3">{props.title[0]}</Text>
-        <Flex direction="row" mt={-1} wrap="wrap" pl={[2, 0, 0]}>
+        <Flex direction="row" mt={-1} wrap="wrap">
           {props.title[4].map((badge, index) => {
             return <EBadge badge={badge} key={index} />;
           })}
@@ -127,13 +127,16 @@ const Experience = () => {
         titleData.push(title);
         Object.keys(experience_data[company][title]).map(entry => {
           titleData.push(experience_data[company][title][entry]);
+          return null;
         });
 
         titlesData.unshift(titleData);
 
         titleData = [];
+        return null;
       });
       titlesData.unshift(experience_data[company].logoURL);
+      return null;
     });
     return output;
   };
@@ -141,17 +144,15 @@ const Experience = () => {
   // console.log(parsedData);
 
   const bgColor = useColorModeValue('gray.200', 'gray.700');
-  const hover = useColorModeValue('gray.400', 'gray.500');
   const borderColor = useColorModeValue('black', 'white');
-  const courseworkColor = useColorModeValue('gray.300', 'gray.600');
-  const badgeColor = useColorModeValue('#A0AEC080', '#71809680');
+
   //gray.500 = #718096
   //gray.400 = #A0AEC0
 
   return (
     <Flex
       id="experience"
-      minH={['auto', , '100vh']}
+      minH={['auto', null, '100vh']}
       px="8"
       width="100%"
       mt={[10, 16, 0]}

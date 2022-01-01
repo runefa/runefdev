@@ -4,13 +4,8 @@ import {
   Flex,
   Text,
   Box,
-  Stack,
   useColorModeValue,
-  Image,
-  Spacer,
   Divider,
-  Icon,
-  List,
   ListItem,
   UnorderedList,
   Grid,
@@ -18,7 +13,6 @@ import {
 
 const Education = () => {
   const bgColor = useColorModeValue('gray.200', 'gray.700');
-  const hover = useColorModeValue('gray.400', 'gray.500');
   const borderColor = useColorModeValue('black', 'white');
   const courseworkColor = useColorModeValue('gray.300', 'gray.600');
   const carolinaBlue = '#4B9CD3';
@@ -45,7 +39,7 @@ const Education = () => {
   return (
     <Flex
       id="education"
-      minH={['auto', , '100vh']}
+      minH={['auto', null, '100vh']}
       px="8"
       width="100%"
       mt={[10, 16, 0]}
@@ -85,9 +79,9 @@ const Education = () => {
             <Box bg={courseworkColor} p={4} borderRadius="sm" mt={2}>
               <Text textStyle="body">Computer Science: </Text>
               <Grid
-                templateColumns={['1fr', , 'repeat(2, 1fr)']}
-                px={['0', , '2']}
-                gap={['0', , '2']}
+                templateColumns={['1fr', null, 'repeat(2, 1fr)']}
+                px={['0', null, '2']}
+                gap={['0', null, '2']}
               >
                 <UnorderedList styleType="square">
                   {csCourses
@@ -117,9 +111,9 @@ const Education = () => {
             <Box bg={courseworkColor} p={4} borderRadius="sm" mt="4">
               <Text textStyle="body">Statistics and Analytics: </Text>
               <Grid
-                templateColumns={['1fr', , 'repeat(2, 1fr)']}
-                px={['0', , '2']}
-                gap={['0', , '2']}
+                templateColumns={['1fr', null, 'repeat(2, 1fr)']}
+                px={['0', null, '2']}
+                gap={['0', null, '2']}
               >
                 <UnorderedList styleType="square">
                   {statsCourses

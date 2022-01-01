@@ -10,6 +10,7 @@ import {
   Icon,
 } from '@chakra-ui/react';
 import { GoTriangleLeft, GoTriangleUp } from 'react-icons/go';
+import hf from '../../assets/hf.webp';
 
 const About = () => {
   const bgColor = useColorModeValue('gray.200', 'gray.700');
@@ -19,7 +20,7 @@ const About = () => {
   return (
     <Flex
       id="about"
-      minH={['auto', , '100vh']}
+      minH={['auto', null, '100vh']}
       px="8"
       width="100%"
       mt={[10, 16, 0]}
@@ -45,7 +46,7 @@ const About = () => {
               <Image
                 border="1px"
                 boxSize={['150px', '175px', '200px']}
-                src="https://miro.medium.com/max/3150/2*v6-FrHQO9uP7mCFvQ-we5Q.jpeg"
+                src={hf}
                 objectFit="cover"
                 objectPosition="50% 50%"
                 borderRadius="full"

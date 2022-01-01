@@ -1,7 +1,8 @@
+import fidelity from '../../assets/fidelity.webp';
+import microsoft from '../../assets/microsoft.webp';
 export const experience_data = {
   Fidelity: {
-    logoURL:
-      'https://images.ctfassets.net/rh81el08iwni/3NTQlZK15C5T1ypo3nzK7o/d70c87e6641113484e0da1fdfdc18347/fidelity.png',
+    logoURL: fidelity,
     'Software Engineer Intern': {
       location: 'Remote',
       dates: 'June 2020 - Aug 2020',
@@ -17,8 +18,7 @@ export const experience_data = {
     },
   },
   'Microsoft Azure': {
-    logoURL:
-      'https://cdn.pixabay.com/photo/2013/02/12/09/07/microsoft-80660_1280.png',
+    logoURL: microsoft,
     'Software Engineer Intern': {
       location: 'Remote',
       dates: 'May 2021 - Aug 2021',

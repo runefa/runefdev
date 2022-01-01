@@ -1,28 +1,15 @@
 import React from 'react';
 import {
-  ChakraProvider,
   Box,
   Text,
   Link,
   Stack,
-  Code,
-  Grid,
   Flex,
-  Spacer,
-  List,
-  ListItem,
-  ListIcon,
-  theme,
   Icon,
   useColorModeValue,
-  UnorderedList,
-  Image,
-  Divider,
-  HStack,
-  Button,
 } from '@chakra-ui/react';
 import { FaGithub, FaEnvelope, FaLinkedin, FaFilePdf } from 'react-icons/fa';
-import resumepdf from '../../hfresume.pdf';
+import resumepdf from '../../assets/hfresume.pdf';
 
 const Home = () => {
   const bgColor = useColorModeValue('gray.200', 'gray.700');
@@ -30,7 +17,7 @@ const Home = () => {
   return (
     <Flex
       id="home"
-      minH={['auto', , '100vh']}
+      minH={['auto', null, '100vh']}
       px="8"
       width="100%"
       pt={[8, 14, 0]}

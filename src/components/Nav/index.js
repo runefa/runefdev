@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import './Link.css';
-import { Flex, Stack, Image, Text, useColorModeValue } from '@chakra-ui/react';
+import { Stack, Text, useColorModeValue } from '@chakra-ui/react';
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 
 const NavBar = () => {
@@ -23,7 +23,7 @@ const NavBar = () => {
       mx="auto"
       align="center"
       textAlign="left"
-      display={['none', , 'flex']}
+      display={['none', null, 'flex']}
     >
       {/* <Image
         border="1px"
