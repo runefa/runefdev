@@ -25,7 +25,7 @@ const SideBar = ({ isOpen, toggle }) => {
         p="3"
       />
       <Stack
-        display={[, isOpen ? '' : 'none', 'none']}
+        display={[isOpen ? '' : 'none', isOpen ? '' : 'none', 'none']}
         h="100vh"
         w="100vw"
         bg={bgColor}
@@ -35,7 +35,7 @@ const SideBar = ({ isOpen, toggle }) => {
         direction="row"
         textAlign="center"
         transition="all 0.5s ease-in-out"
-        top={isOpen ? '0' : '-100%'}
+        top={isOpen ? '0' : '-100vh'}
         opacity={isOpen ? '100%' : '0'}
         zIndex={999}
         cursor="pointer"
@@ -44,8 +44,8 @@ const SideBar = ({ isOpen, toggle }) => {
           as={FaTimes}
           pos="fixed"
           right="0"
-          boxSize="2rem"
-          p="1"
+          boxSize="4rem"
+          p="3"
           onClick={toggle}
         />
 
