@@ -7,8 +7,8 @@ export const experience_data = {
       location: 'Remote',
       dates: 'June 2020 - Aug 2020',
       description: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Worked with the mobile alerts team to add new notifications for various investment actions.',
+        'Tested and demoed new SMS alerts that extended existing push notification services.',
       ],
       badges: [
         ['https://www.jenkins.io/', 'jenkins'],
@@ -23,8 +23,8 @@ export const experience_data = {
       location: 'Remote',
       dates: 'May 2021 - Aug 2021',
       description: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Built an internal pipeline that enabled developers to get direct and immediate access to their Swagger output for validation.',
+        'Integrated GitHub and DevOps to automate the Swagger validation process and hasten the delay from feature to the public-facing Azure SDK.',
       ],
       badges: [
         ['https://github.com/about', 'GitHub'],
