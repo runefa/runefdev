@@ -1,5 +1,6 @@
 import React from 'react';
-import { Flex, Text, Link } from '@chakra-ui/react';
+import { Flex, Text, Link, Stack, Icon } from '@chakra-ui/react';
+import { FaGithub } from 'react-icons/fa';
 
 const Footer = () => {
   const carolinaBlue = '#4B9CD3';
@@ -25,6 +26,17 @@ const Footer = () => {
         </Link>
         .
       </Text>
+      <Stack direction="row" align="center" pt={2}>
+        <Icon as={FaGithub} size={2} />
+        <Link
+          textStyle="footer"
+          color={carolinaBlue}
+          href="https://github.com/haroonf/haroonfio"
+          isExternal
+        >
+          Source code.
+        </Link>
+      </Stack>
     </Flex>
   );
 };

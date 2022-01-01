@@ -38,7 +38,7 @@ function App() {
               pattern="wiggle"
               minH="100vh"
               patOpacity={0.2}
-              pb={24}
+              pb={20}
             >
               <Home />
               <About />
