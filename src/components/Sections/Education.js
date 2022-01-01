@@ -30,7 +30,7 @@ const Education = () => {
     'Data Science',
     'Data Analysis Methods',
     'Linear Optimization',
-    'Desicion Analytics',
+    'Decision Analytics',
     'Probability',
     'Stochastic Modeling',
     'Mathematical Statistics',

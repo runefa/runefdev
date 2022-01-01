@@ -16,7 +16,7 @@ const About = () => {
   const bgColor = useColorModeValue('gray.200', 'gray.700');
   const borderColor = useColorModeValue('black', 'white');
   const bubbleColor = useColorModeValue('gray.300', 'gray.600');
-  const carolinaBlue = '#4B9CD3';
+  // const carolinaBlue = '#4B9CD3';
   return (
     <Flex
       id="about"
