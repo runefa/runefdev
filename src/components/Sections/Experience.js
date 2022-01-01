@@ -12,7 +12,7 @@ import {
   Badge,
   Link,
 } from '@chakra-ui/react';
-import { experience_data } from '../../data/experience_data';
+import { experience_data } from '../data/experience_data';
 
 const Company = props => {
   const courseworkColor = useColorModeValue('gray.300', 'gray.600');

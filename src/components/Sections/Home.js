@@ -22,6 +22,7 @@ import {
   Button,
 } from '@chakra-ui/react';
 import { FaGithub, FaEnvelope, FaLinkedin, FaFilePdf } from 'react-icons/fa';
+import resumepdf from '../../hfresume.pdf';
 
 const Home = () => {
   const bgColor = useColorModeValue('gray.200', 'gray.700');
@@ -99,7 +100,7 @@ const Home = () => {
                 _hover={{
                   bg: hover,
                 }}
-                href="#"
+                href={resumepdf}
                 isExternal
               >
                 <Icon as={FaFilePdf} boxSize="5" mt={['auto']} mb={['auto']} />
