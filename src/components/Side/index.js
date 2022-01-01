@@ -5,7 +5,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 
 const SideBar = ({ isOpen, toggle }) => {
-  const bgColor = useColorModeValue('white', 'gray.800');
+  const bgColor = useColorModeValue('gray.100', 'gray.800');
   return (
     <>
       <Icon

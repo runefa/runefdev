@@ -13,7 +13,7 @@ const Footer = () => {
       mb={8}
       direction="column"
     >
-      <Text textStyle="footer">Designed and Developed by Haroon Feisal.</Text>
+      <Text textStyle="footer">Designed and developed by Haroon Feisal.</Text>
       <Text textStyle="footer" pt={2}>
         Built with{' '}
         <Link color={carolinaBlue} href="https://reactjs.org/" isExternal>
