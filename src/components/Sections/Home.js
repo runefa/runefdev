@@ -50,7 +50,13 @@ const Home = () => {
               Links:
             </Text>
 
-            <Stack mt="4" direction={['column', 'row']} wrap="wrap" gridGap="2">
+            <Stack
+              mt="4"
+              direction={['column', 'row']}
+              wrap="wrap"
+              gridGap="2"
+              ml={[0, -2]}
+            >
               <Link
                 variant="button"
                 bg={useColorModeValue('gray.300', 'gray.600')}
@@ -59,6 +65,7 @@ const Home = () => {
                 }}
                 href="https://github.com/haroonf"
                 isExternal
+                ml={[0, 2]}
               >
                 <Icon as={FaGithub} boxSize="5" mt={['auto']} mb={['auto']} />
                 <Text textStyle="button">Github</Text>
