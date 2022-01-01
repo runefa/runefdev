@@ -25,7 +25,7 @@ const SideBar = ({ isOpen, toggle }) => {
         p="3"
       />
       <Stack
-        display={[isOpen ? '' : 'none', isOpen ? '' : 'none', 'none']}
+        display={[isOpen ? 'inline' : '', isOpen ? 'inline' : '', 'none']}
         h="100vh"
         w="100vw"
         bg={bgColor}
