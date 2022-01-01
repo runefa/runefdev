@@ -53,7 +53,7 @@ const SideBar = ({ isOpen, toggle }) => {
           onClick={toggle}
         />
 
-        <Text fontSize="3xl" pt="20%">
+        <Text fontSize="3xl" pt="40%">
           <Link to="home" onClick={toggle}>
             HOME
           </Link>
