@@ -32,10 +32,10 @@ export const experience_data = {
           'https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops',
           'DevOps',
         ],
-        ['https://nodejs.org/en/about/', 'NodeJS'],
+        ['https://nodejs.org/en/about/', 'Node'],
         [
-          'https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/',
-          'C#',
+          'https://dotnet.microsoft.com/en-us/learn/dotnet/what-is-dotnet',
+          '.NET',
         ],
         [
           'https://azure.microsoft.com/en-us/services/devops/pipelines/',

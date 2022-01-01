@@ -36,7 +36,7 @@ const theme = extendTheme({
       letterSpacing: '-1%',
     },
     h3: {
-      fontSize: ['1.2rem', '1.4rem'],
+      fontSize: ['1.1rem', '1.4rem'],
       fontWeight: 'semibold',
       letterSpacing: '-1%',
     },

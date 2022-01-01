@@ -16,7 +16,7 @@ const About = () => {
   const bgColor = useColorModeValue('gray.200', 'gray.700');
   const borderColor = useColorModeValue('black', 'white');
   const bubbleColor = useColorModeValue('gray.300', 'gray.600');
-
+  const carolinaBlue = '#4B9CD3';
   return (
     <Flex
       id="about"
@@ -66,7 +66,12 @@ const About = () => {
                   display={['flex', 'flex', 'none']}
                 />
                 <Box bg={bubbleColor} p={4} borderRadius="sm">
-                  <Text textStyle="h3">Hi, I'm Haroon.</Text>
+                  <Text textStyle="h3">
+                    Hi, I'm&nbsp;
+                    <Text as="span" fontSize="inherit">
+                      Haroon.
+                    </Text>
+                  </Text>
                   <Text textStyle="body" mt="4">
                     I've always been interested in tech and engineering. When I
                     was younger, my focus was captured by Lego robotics. As I

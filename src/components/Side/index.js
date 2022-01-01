@@ -83,11 +83,3 @@ const SideBar = ({ isOpen, toggle }) => {
 };
 
 export default SideBar;
-
-// opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
-// top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
-// transition: 0.5s ease-in-out;
-// position: fixed;
-// width: 100vh;
-// height: 100vh;
-// background: #0d0d0d;

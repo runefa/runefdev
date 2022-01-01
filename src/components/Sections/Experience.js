@@ -16,7 +16,6 @@ import { experience_data } from '../data/experience_data';
 
 const Company = props => {
   const courseworkColor = useColorModeValue('gray.300', 'gray.600');
-
   return (
     <Flex
       mt="6"
@@ -31,6 +30,7 @@ const Company = props => {
         align="center"
         justify="center"
         p={1}
+        wrap="wrap"
       >
         <Image
           src={props.logoURL}
@@ -39,7 +39,7 @@ const Company = props => {
           p="5px"
           mr={1}
         />
-        <Text textStyle="h2" mr={1}>
+        <Text textStyle="h2" mr={1} wordBreak="break-all">
           {props.company}
         </Text>
       </Flex>
@@ -64,25 +64,23 @@ const Company = props => {
 
 const Title = props => {
   return (
-    <>
-      <Box ml={0} mt={1} p={2} minH="20">
-        <Text textStyle="h4" opacity=".6">
-          {props.title[1]} · {props.title[2]}
-        </Text>
-        <Text textStyle="h3">{props.title[0]}</Text>
-        <Flex direction="row" mt={-1} wrap="wrap">
-          {props.title[4].map((badge, index) => {
-            return <EBadge badge={badge} key={index} />;
-          })}
-        </Flex>
+    <Box ml={0} mt={1} p={2} minH="20">
+      <Text textStyle="h4" opacity=".6">
+        {props.title[1]} · {props.title[2]}
+      </Text>
+      <Text textStyle="h3">{props.title[0]}</Text>
+      <Flex direction="row" mt={-1} wrap="wrap">
+        {props.title[4].map((badge, index) => {
+          return <EBadge badge={badge} key={index} />;
+        })}
+      </Flex>
 
-        <UnorderedList mt={1} px={2} styleType="square">
-          {props.title[3].map((text, index) => {
-            return <EListItem text={text} key={index} />;
-          })}
-        </UnorderedList>
-      </Box>
-    </>
+      <UnorderedList mt={1} px={2} styleType="square">
+        {props.title[3].map((text, index) => {
+          return <EListItem text={text} key={index} />;
+        })}
+      </UnorderedList>
+    </Box>
   );
 };
 
@@ -141,13 +139,9 @@ const Experience = () => {
     return output;
   };
   const parsedData = dataParser();
-  // console.log(parsedData);
 
   const bgColor = useColorModeValue('gray.200', 'gray.700');
   const borderColor = useColorModeValue('black', 'white');
-
-  //gray.500 = #718096
-  //gray.400 = #A0AEC0
 
   return (
     <Flex
