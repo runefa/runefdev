@@ -34,7 +34,7 @@ const SideBar = ({ isOpen, toggle }) => {
         justify="center"
         direction="row"
         textAlign="center"
-        transition="all 0.5s ease-in-out"
+        transition="all 0.3s ease-in-out"
         top={isOpen ? '0' : '-100vh'}
         opacity={isOpen ? '100%' : '0'}
         zIndex={999}

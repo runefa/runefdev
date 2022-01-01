@@ -11,7 +11,7 @@ export const experience_data = {
       ],
       badges: [
         ['https://www.jenkins.io/', 'jenkins'],
-        ['https://spring.io/', 'java spring'],
+        ['https://spring.io/', 'spring'],
         ['https://www.ibm.com/cloud/urbancode', 'UrbanCode'],
       ],
     },
@@ -30,12 +30,16 @@ export const experience_data = {
         ['https://github.com/about', 'GitHub'],
         [
           'https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops',
-          'Azure DevOps',
+          'DevOps',
         ],
         ['https://nodejs.org/en/about/', 'NodeJS'],
         [
           'https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/',
           'C#',
+        ],
+        [
+          'https://azure.microsoft.com/en-us/services/devops/pipelines/',
+          'Pipelines',
         ],
       ],
     },

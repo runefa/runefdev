@@ -70,7 +70,7 @@ const Title = props => {
           {props.title[1]} · {props.title[2]}
         </Text>
         <Text textStyle="h3">{props.title[0]}</Text>
-        <Flex direction="row" mt={-1.5} wrap="wrap" pl={[2, 0, 0]}>
+        <Flex direction="row" mt={-1} wrap="wrap" pl={[2, 0, 0]}>
           {props.title[4].map((badge, index) => {
             return <EBadge badge={badge} key={index} />;
           })}

@@ -61,8 +61,12 @@ const About = () => {
                 <Box bg={bubbleColor} p={4} borderRadius="sm">
                   <Text textStyle="h3">Hi, I'm Haroon.</Text>
                   <Text textStyle="body" mt="4">
-                    I began coding through robotics. Later, when I learned I
-                    could program videogames, I was sold.
+                    I've always been interested in tech and engineering. When I
+                    was younger, my focus was on Lego robotics. As I grew older,
+                    I discovered the Raspberry Pi and began coding. I found the
+                    challenge of software to be exciting. In middle school, I
+                    was invited to attend a Python bootcamp where my passion for
+                    programming was cemented.
                   </Text>
                 </Box>
               </Stack>
