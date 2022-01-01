@@ -44,7 +44,7 @@ export const experience_data = {
       ],
     },
     'Software Engineer I': {
-      location: 'Redmond, WA',
+      location: 'Redmond WA',
       dates: 'Feb 2022 - Current',
       description: [],
       badges: [],

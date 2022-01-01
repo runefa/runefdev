@@ -23,6 +23,8 @@ import Education from './components/Sections/Education';
 import Experience from './components/Sections/Experience';
 
 function App() {
+  const carolinaBlue = '#4B9CD3';
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -63,6 +65,28 @@ function App() {
             </PillPity>
           </Box>
         </Flex>
+      </Flex>
+      <Flex
+        as="footer"
+        justify="center"
+        align="center"
+        p={4}
+        mt={8}
+        mb={8}
+        direction="column"
+      >
+        <Text textStyle="footer">Designed and Developed by Haroon Feisal.</Text>
+        <Text textStyle="footer" pt={2}>
+          Built with{' '}
+          <Link color={carolinaBlue} href="https://reactjs.org/" isExternal>
+            React
+          </Link>{' '}
+          and hosted on&nbsp;
+          <Link color={carolinaBlue} href="https://vercel.com/" isExternal>
+            Vercel
+          </Link>
+          .
+        </Text>
       </Flex>
     </ChakraProvider>
   );
