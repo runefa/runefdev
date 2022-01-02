@@ -68,7 +68,7 @@ const Home = () => {
                 isExternal
               >
                 <Icon as={FaGithub} boxSize="5" mt={['auto']} mb={['auto']} />
-                <Text textStyle="button">Github</Text>
+                <Text textStyle="button">GitHub</Text>
               </Link>
               <Link
                 variant="button"
