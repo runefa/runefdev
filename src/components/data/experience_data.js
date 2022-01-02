@@ -23,7 +23,7 @@ export const experience_data = {
       location: 'Remote',
       dates: 'May 2021 - Aug 2021',
       description: [
-        'Built an internal pipeline that enabled developers to get direct and immediate access to their Swagger output for validation.',
+        'Built an internal pipeline that enabled developers to get direct and immediate access to their endpoint output for validation.',
         'Integrated GitHub and DevOps to automate the Swagger validation process and hasten the delay from feature to the public-facing Azure SDK.',
       ],
       badges: [
