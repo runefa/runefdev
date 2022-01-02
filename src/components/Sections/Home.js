@@ -14,6 +14,7 @@ import resumepdf from '../../assets/hfresume.pdf';
 const Home = () => {
   const bgColor = useColorModeValue('gray.200', 'gray.700');
   const hover = useColorModeValue('gray.400', 'gray.500');
+  const buttonColor = useColorModeValue('gray.300', 'gray.600');
   return (
     <Flex
       id="home"
@@ -55,24 +56,23 @@ const Home = () => {
               direction={['column', 'row']}
               wrap="wrap"
               gridGap="2"
-              ml={[0, -2]}
+              spacing={0}
             >
               <Link
                 variant="button"
-                bg={useColorModeValue('gray.300', 'gray.600')}
+                bg={buttonColor}
                 _hover={{
                   bg: hover,
                 }}
                 href="https://github.com/haroonf"
                 isExternal
-                ml={[0, 2]}
               >
                 <Icon as={FaGithub} boxSize="5" mt={['auto']} mb={['auto']} />
                 <Text textStyle="button">Github</Text>
               </Link>
               <Link
                 variant="button"
-                bg={useColorModeValue('gray.300', 'gray.600')}
+                bg={buttonColor}
                 _hover={{
                   bg: hover,
                 }}
@@ -84,7 +84,7 @@ const Home = () => {
               </Link>
               <Link
                 variant="button"
-                bg={useColorModeValue('gray.300', 'gray.600')}
+                bg={buttonColor}
                 _hover={{
                   bg: hover,
                 }}
@@ -96,7 +96,7 @@ const Home = () => {
               </Link>
               <Link
                 variant="button"
-                bg={useColorModeValue('gray.300', 'gray.600')}
+                bg={buttonColor}
                 _hover={{
                   bg: hover,
                 }}

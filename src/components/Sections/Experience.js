@@ -109,6 +109,8 @@ const EListItem = props => {
 };
 
 const Experience = () => {
+  // This is written with map since it was originally supposed to be an inline function.
+  // It was a little too long so I just moved it out of the return statement.
   const dataParser = () => {
     const output = {};
     const companies = [...Object.keys(experience_data)];
