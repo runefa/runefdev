@@ -70,7 +70,7 @@ const Education = () => {
               display="inline-block"
               fontSize="sm"
             >
-              3.8/4.0 (Highest Distinction)
+              Highest Distinction
             </Text>
             <Text textStyle="body" mt="4">
               Relevant Coursework:
