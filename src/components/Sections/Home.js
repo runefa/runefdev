@@ -88,7 +88,7 @@ const Home = () => {
                 _hover={{
                   bg: hover,
                 }}
-                href="mailto:haroonf@live.unc.edu"
+                href="mailto:haroonf@gmail.com"
                 isExternal
               >
                 <Icon as={FaEnvelope} boxSize="5" mt={['auto']} mb={['auto']} />
