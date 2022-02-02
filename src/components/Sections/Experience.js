@@ -104,24 +104,6 @@ const EListItem = props => {
 };
 
 const Experience = () => {
-  const companyobjects = () => {
-    const output = [];
-    const companies = [...Object.keys(experience_data)];
-    companies.reverse();
-    companies.forEach((company, index) => {
-      const { logoURL, ...experiences } = experience_data[company];
-      output.push(
-        <Company
-          key={`company${index}`}
-          company={company}
-          logoURL={logoURL}
-          experiences={experiences}
-        />
-      );
-    });
-    return output;
-  };
-
   const bgColor = useColorModeValue('gray.200', 'gray.700');
   const borderColor = useColorModeValue('black', 'white');
 
@@ -145,7 +127,19 @@ const Experience = () => {
             <Text textStyle="h1">Experience</Text>
             <Divider borderColor={borderColor} />
             <Flex width="100%" direction="column">
-              {companyobjects()}
+              {Object.keys(experience_data)
+                .reverse()
+                .map((company, index) => {
+                  const { logoURL, ...experiences } = experience_data[company];
+                  return (
+                    <Company
+                      key={`company${index}`}
+                      company={company}
+                      logoURL={logoURL}
+                      experiences={experiences}
+                    />
+                  );
+                })}
             </Flex>
           </Flex>
         </Box>
