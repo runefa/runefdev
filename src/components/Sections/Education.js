@@ -11,31 +11,14 @@ import {
   Grid,
 } from '@chakra-ui/react';
 
+import { csCourses, statsCourses } from '../data/education_data';
+
 const Education = () => {
   const bgColor = useColorModeValue('gray.200', 'gray.700');
   const borderColor = useColorModeValue('black', 'white');
   const courseworkColor = useColorModeValue('gray.300', 'gray.600');
   const carolinaBlue = '#4B9CD3';
-  const csCourses = [
-    'Practical Web Design/Dev',
-    'Data Structures',
-    'Modern Web Programming',
-    'Internet Services and Protocols',
-    'Algorithms and Analysis',
-    'Languages and Computation',
-    'Files and Databases',
-    'Computer Organization',
-  ];
-  const statsCourses = [
-    'Data Science',
-    'Data Analysis Methods',
-    'Linear Optimization',
-    'Decision Analytics',
-    'Probability',
-    'Stochastic Modeling',
-    'Mathematical Statistics',
-    'Discrete Mathematics',
-  ];
+
   return (
     <Flex
       id="education"

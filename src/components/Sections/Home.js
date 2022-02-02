@@ -8,8 +8,8 @@ import {
   Icon,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { FaGithub, FaEnvelope, FaLinkedin, FaFilePdf } from 'react-icons/fa';
-import resumepdf from '../../assets/hfresume.pdf';
+
+import { buttons_data } from '../data/home_data';
 
 const Home = () => {
   const bgColor = useColorModeValue('gray.200', 'gray.700');
@@ -58,54 +58,23 @@ const Home = () => {
               gridGap="2"
               spacing={0}
             >
-              <Link
-                variant="button"
-                bg={buttonColor}
-                _hover={{
-                  bg: hover,
-                }}
-                href="https://github.com/haroonf"
-                isExternal
-              >
-                <Icon as={FaGithub} boxSize="5" mt={['auto']} mb={['auto']} />
-                <Text textStyle="button">GitHub</Text>
-              </Link>
-              <Link
-                variant="button"
-                bg={buttonColor}
-                _hover={{
-                  bg: hover,
-                }}
-                href="https://www.linkedin.com/in/haroonfeisal/"
-                isExternal
-              >
-                <Icon as={FaLinkedin} boxSize="5" mt={['auto']} mb={['auto']} />
-                <Text textStyle="button">LinkedIn</Text>
-              </Link>
-              <Link
-                variant="button"
-                bg={buttonColor}
-                _hover={{
-                  bg: hover,
-                }}
-                href="mailto:haroonf@gmail.com"
-                isExternal
-              >
-                <Icon as={FaEnvelope} boxSize="5" mt={['auto']} mb={['auto']} />
-                <Text textStyle="button">Email</Text>
-              </Link>
-              <Link
-                variant="button"
-                bg={buttonColor}
-                _hover={{
-                  bg: hover,
-                }}
-                href={resumepdf}
-                isExternal
-              >
-                <Icon as={FaFilePdf} boxSize="5" mt={['auto']} mb={['auto']} />
-                <Text textStyle="button">Resume</Text>
-              </Link>
+              {Object.keys(buttons_data).map((name, index) => {
+                const { icon, href } = buttons_data[name];
+                return (
+                  <Link
+                    variant="button"
+                    bg={buttonColor}
+                    _hover={{
+                      bg: hover,
+                    }}
+                    href={href}
+                    isExternal
+                  >
+                    <Icon as={icon} boxSize="5" mt={['auto']} mb={['auto']} />
+                    <Text textStyle="button">{name}</Text>
+                  </Link>
+                );
+              })}
             </Stack>
           </Flex>
         </Box>
