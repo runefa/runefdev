@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
+import { sections } from '../data/sections_data';
 
 const SideBar = ({ isOpen, toggle }) => {
   const bgColor = useColorModeValue('gray.100', 'gray.800');
@@ -52,31 +53,16 @@ const SideBar = ({ isOpen, toggle }) => {
           p="3"
           onClick={toggle}
         />
-
-        <Text fontSize="3xl" pt="40%">
-          <Link to="home" onClick={toggle}>
-            HOME
-          </Link>
-        </Text>
-
-        <Text fontSize="3xl" pt="2">
-          <Link to="about" onClick={toggle}>
-            ABOUT
-          </Link>
-        </Text>
-        <Text fontSize="3xl" pt="2">
-          <Link to="education" onClick={toggle}>
-            EDUCATION
-          </Link>
-        </Text>
-
-        <Text fontSize="3xl" pt="2" pb="2">
-          <Link to="experience" onClick={toggle}>
-            EXPERIENCE
-          </Link>
-        </Text>
-
-        <ColorModeSwitcher />
+        {sections.map((name, index) => {
+          return (
+            <Text fontSize="3xl" pt={index === 0 ? '40%' : 2}>
+              <Link to={name} onClick={toggle}>
+                {name.toUpperCase()}
+              </Link>
+            </Text>
+          );
+        })}
+        <ColorModeSwitcher pt={4} />
       </Stack>
     </>
   );

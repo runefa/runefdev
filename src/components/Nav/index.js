@@ -3,6 +3,7 @@ import { Link, animateScroll as scroll } from 'react-scroll';
 import './Link.css';
 import { Stack, Text, useColorModeValue } from '@chakra-ui/react';
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
+import { sections } from '../data/sections_data';
 
 const NavBar = () => {
   const bgColor = useColorModeValue('gray.200', 'gray.700');
@@ -35,46 +36,22 @@ const NavBar = () => {
       >
         HF
       </Text>
-      <Link
-        to="home"
-        smooth={true}
-        duration={500}
-        spy={true}
-        exact="true"
-        className="navbar"
-      >
-        HOME
-      </Link>
-      <Link
-        to="about"
-        smooth={true}
-        duration={500}
-        spy={true}
-        exact="true"
-        className="navbar"
-      >
-        ABOUT
-      </Link>
-      <Link
-        to="education"
-        smooth={true}
-        duration={500}
-        spy={true}
-        exact="true"
-        className="navbar"
-      >
-        EDUCATION
-      </Link>
-      <Link
-        to="experience"
-        smooth={true}
-        duration={500}
-        spy={true}
-        exact="true"
-        className="navbar"
-      >
-        EXPERIENCE
-      </Link>
+
+      {sections.map((name, index) => {
+        return (
+          <Link
+            to={name}
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            className="navbar"
+          >
+            {name.toUpperCase()}
+          </Link>
+        );
+      })}
+
       <ColorModeSwitcher />
     </Stack>
   );
