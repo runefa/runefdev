@@ -43,21 +43,16 @@ const Company = props => {
           {props.company}
         </Text>
       </Flex>
-      {props.titles.map((title, index) => {
-        if (index === 0) {
+      {Object.keys(props.experiences)
+        .reverse()
+        .map((title, index) => {
           return (
             <React.Fragment key={`fragment${index}`}>
-              <Title title={title} />
+              {index !== 0 && <Divider />}
+              <Title title={title} data={props.experiences[title]} />
             </React.Fragment>
           );
-        }
-        return (
-          <React.Fragment key={`fragment${index}`}>
-            <Divider />
-            <Title title={title} />
-          </React.Fragment>
-        );
-      })}
+        })}
     </Flex>
   );
 };
@@ -66,17 +61,17 @@ const Title = props => {
   return (
     <Box ml={0} mt={1} p={2} minH="20">
       <Text textStyle="h4" opacity=".6">
-        {props.title[1]} · {props.title[2]}
+        {props.data.location} · {props.data.dates}
       </Text>
-      <Text textStyle="h3">{props.title[0]}</Text>
+      <Text textStyle="h3">{props.title}</Text>
       <Flex direction="row" mt={-1} wrap="wrap">
-        {props.title[4].map((badge, index) => {
+        {props.data.badges.map((badge, index) => {
           return <EBadge badge={badge} key={index} />;
         })}
       </Flex>
 
       <UnorderedList mt={1} px={2} styleType="square">
-        {props.title[3].map((text, index) => {
+        {props.data.description.map((text, index) => {
           return <EListItem text={text} key={index} />;
         })}
       </UnorderedList>
@@ -109,38 +104,23 @@ const EListItem = props => {
 };
 
 const Experience = () => {
-  // This is written with map since it was originally supposed to be an inline function.
-  // It was a little too long so I just moved it out of the return statement.
-  const dataParser = () => {
-    const output = {};
+  const companyobjects = () => {
+    const output = [];
     const companies = [...Object.keys(experience_data)];
     companies.reverse();
-    companies.map(company => {
-      const titles = [];
-      const titlesData = [];
-      let titleData = [];
-      output[company] = titlesData;
-
-      titles.push(...Object.keys(experience_data[company]));
-
-      titles.slice(1).map(title => {
-        titleData.push(title);
-        Object.keys(experience_data[company][title]).map(entry => {
-          titleData.push(experience_data[company][title][entry]);
-          return null;
-        });
-
-        titlesData.unshift(titleData);
-
-        titleData = [];
-        return null;
-      });
-      titlesData.unshift(experience_data[company].logoURL);
-      return null;
+    companies.forEach((company, index) => {
+      const { logoURL, ...experiences } = experience_data[company];
+      output.push(
+        <Company
+          key={`company${index}`}
+          company={company}
+          logoURL={logoURL}
+          experiences={experiences}
+        />
+      );
     });
     return output;
   };
-  const parsedData = dataParser();
 
   const bgColor = useColorModeValue('gray.200', 'gray.700');
   const borderColor = useColorModeValue('black', 'white');
@@ -165,16 +145,7 @@ const Experience = () => {
             <Text textStyle="h1">Experience</Text>
             <Divider borderColor={borderColor} />
             <Flex width="100%" direction="column">
-              {Object.keys(parsedData).map((key, index) => {
-                return (
-                  <Company
-                    company={key}
-                    key={index}
-                    titles={parsedData[key].slice(1)}
-                    logoURL={parsedData[key][0]}
-                  />
-                );
-              })}
+              {companyobjects()}
             </Flex>
           </Flex>
         </Box>
