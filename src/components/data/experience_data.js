@@ -23,8 +23,8 @@ export const experience_data = {
       location: 'Remote',
       dates: 'May 2021 - Aug 2021',
       description: [
-        'Built an internal pipeline that enables developers to get direct and immediate access to their endpoint output for validation.',
-        'Integrated GitHub and DevOps to automate the Swagger validation process and hasten the delay from feature to the public-facing Azure SDK.',
+        'Built internal pipeline that enabled developers to get direct access to their endpoint output for validation including immediate feedback on security risks and syntax violations.',
+        'Integrated GitHub and DevOps to automate the Swagger validation process and hasten feature work release process to public-facing Azure SDK.',
       ],
       badges: [
         ['https://github.com/about', 'GitHub'],
@@ -47,8 +47,9 @@ export const experience_data = {
       location: 'Redmond WA',
       dates: 'Feb 2022 - Nov 2022',
       description: [
-        'Drove the design and release of the Azure Container Apps CLI command module from private beta versions to public announcement including an end-to-end fully managed deployment experience.',
-        'Developed and maintained all Azure App Service CLI commands, catering to a combined 2 million monthly active users.',
+        'Drove design and release of Azure Container Apps Command Line Interface from private beta to public release.',
+        'Engineered the first Azure CLI end-to-end fully managed deployment command that was demoed at the Azure Container Apps public release during the 2022 Microsoft Build Event.',
+        'Developed and maintained all Azure App Service CLI commands for a combined 2 million monthly active users.',
       ],
       badges: [
         ['https://github.com/Azure/azure-cli','Azure CLI'],
@@ -59,11 +60,13 @@ export const experience_data = {
     },
     'Backend Software Engineer': {
       location: 'Redmond WA',
-      dates: 'Nov 2022 - Current',
+      dates: 'Nov 2022 - Present',
       description: [
-        'Architected and deployed robust automated infrastructure across over sixty regions for Azure App Service Managed Certificates that reduces sync time from hours to minutes.',
-        'Led the design and implementation of the regionalization of Azure App Service Domains involving the complete overhaul of the database and data layers.',
-        'Oversaw maintenance and support operations for Azure App Service Domains serving over 80,000 yearly customers while spearheading efforts to enhance fraud detection through increased alerting and the implementation of a new customer trust system.',
+        'Architected and deployed automated infrastructure across over forty regions for Azure App Service Managed Certificates that reduces sync time from hours to minutes.',
+        'Developed four-phase plan for Azure App Service Domains global regionalization including fallback, concurrency solutions, data replication, and traffic management.',
+        'Led redesign and rollout of database, background job, and data layer changes required for Azure App Service Domains multi-region scaling.',
+        'Spearheaded efforts for domain fraud detection through alerting and implementation of new pre-purchase validation.',
+        'Oversaw maintenance and support for Azure App Service Domains serving over 80,000 customers.',
       ],
       badges: [
         ['https://learn.microsoft.com/en-us/azure/app-service/manage-custom-dns-buy-domain','App Service Domains'],
