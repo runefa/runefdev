@@ -35,7 +35,7 @@ const Home = () => {
             <Text opacity={0.4}>Name:</Text>
             <Stack direction={['column', 'row']} spacing="2">
               <Text textStyle="h0" mr={['0', '4', '6']}>
-                Haroon
+                Rune
               </Text>
 
               <Text textStyle="h0">Feisal.</Text>

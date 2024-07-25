@@ -34,7 +34,7 @@ const NavBar = () => {
         onClick={scrollToTop}
         cursor="pointer"
       >
-        HF
+        RF
       </Text>
 
       {sections.map((name, index) => {

@@ -1,5 +1,5 @@
 import { FaEnvelope, FaFilePdf, FaGithub, FaLinkedin } from 'react-icons/fa';
-import resumepdf from '../../assets/hfresume.pdf';
+import resumepdf from '../../assets/rfresume.pdf';
 
 export const buttons_data = {
   GitHub: {
@@ -8,11 +8,11 @@ export const buttons_data = {
   },
   LinkedIn: {
     icon: FaLinkedin,
-    href: 'https://www.linkedin.com/in/haroonfeisal/',
+    href: 'https://www.linkedin.com/in/runefeisal/',
   },
   Email: {
     icon: FaEnvelope,
-    href: 'mailto:haroonf@gmail.com',
+    href: 'mailto:runefswe@gmail.com',
   },
   Resume: {
     icon: FaFilePdf,

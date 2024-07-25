@@ -1,6 +1,6 @@
-# haroonf.io
+# runef.dev
 
-This is a repository containing the source code for [my personal website](https://haroonf.io).
+This is a repository containing the source code for [my personal website](https://runef.dev).
 
 ## Development
 

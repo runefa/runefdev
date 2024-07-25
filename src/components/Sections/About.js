@@ -10,7 +10,7 @@ import {
   Icon,
 } from '@chakra-ui/react';
 import { GoTriangleLeft, GoTriangleUp } from 'react-icons/go';
-import hf from '../../assets/hf.webp';
+import rf from '../../assets/rf.webp';
 import { mainText, sideText } from '../data/about_data';
 
 const About = () => {
@@ -47,7 +47,7 @@ const About = () => {
               <Image
                 border="1px"
                 boxSize={['150px', '175px', '200px']}
-                src={hf}
+                src={rf}
                 objectFit="cover"
                 objectPosition="50% 50%"
                 borderRadius="full"
@@ -70,7 +70,7 @@ const About = () => {
                   <Text textStyle="h3">
                     Hi, I'm&nbsp;
                     <Text as="span" fontSize="inherit">
-                      Haroon.
+                      Rune.
                     </Text>
                   </Text>
                   <Text textStyle="body" mt="4">

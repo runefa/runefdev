@@ -14,7 +14,7 @@ const Footer = () => {
       mb={8}
       direction="column"
     >
-      <Text textStyle="footer">Designed and developed by Haroon Feisal.</Text>
+      <Text textStyle="footer">Designed and developed by Rune Feisal.</Text>
       <Text textStyle="footer" pt={2}>
         Built with{' '}
         <Link color={carolinaBlue} href="https://reactjs.org/" isExternal>
@@ -31,7 +31,7 @@ const Footer = () => {
         <Link
           textStyle="footer"
           color={carolinaBlue}
-          href="https://github.com/haroonf/haroonfio"
+          href="https://github.com/runefa/haroonfio"
           isExternal
         >
           Source code.
