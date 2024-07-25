@@ -31,7 +31,7 @@ const Footer = () => {
         <Link
           textStyle="footer"
           color={carolinaBlue}
-          href="https://github.com/runefa/haroonfio"
+          href="https://github.com/runefa/runefdev"
           isExternal
         >
           Source code.
